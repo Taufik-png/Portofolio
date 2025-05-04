@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio</title>
+
+  <!-- Font lokal -->
+  <style>
+    @font-face {
+      font-family: 'EmbassyOpti';
+      src: url('fonts/EmbassyOpti.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'CenturyGothic';
+      src: url('fonts/century-regular.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+      font-family: 'CenturyGothic', sans-serif;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="position:relative; width:100%; height:100%; text-align:center; color:white;">
+
+    <!-- Background -->
+    <img src="Images/background.png" alt="Background"
+         style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:0.9;" />
+
+    <!-- Konten -->
+    <div style="position:absolute; bottom:15%; left:50%; transform:translateX(-50%); line-height:1.2;">
+
+      <!-- Judul -->
+      <div style="display: inline-block;">
+        <span style="
+          font-family:'EmbassyOpti';
+          font-size:clamp(130px, 14vw, 260px);
+          display:inline-block;
+          position:relative;
+          left:-35px;
+          margin-right:12px;
+          transform: translateY(5%);
+          text-shadow:
+            3px 3px 4px rgba(0,0,0,0.6),
+           -3px -3px 2px rgba(255,255,255,0.3);
+        ">
+          P
+        </span>
+        <span style="
+          font-family:'CenturyGothic', sans-serif;
+          font-size:clamp(52px, 6.8vw, 120px);
+          text-shadow:
+            3px 3px 4px rgba(0,0,0,0.6),
+           -3px -3px 2px rgba(255,255,255,0.3);
+        ">
+          ortofolio
+        </span>
+      </div>
+
+      <!-- Subjudul -->
+      <div style="
+        font-family:'CenturyGothic', sans-serif;
+        font-size:clamp(26px, 3.2vw, 44px);
+        margin-top:-30px;
+        text-shadow:
+          2px 2px 3px rgba(0,0,0,0.6),
+         -2px -2px 2px rgba(255,255,255,0.3);
+      ">
+        Graphic Design
+      </div>
+
+      <!-- Tombol -->
+      <a href="home.html" style="
+        display:inline-block;
+        margin-top:30px;
+        padding:12px 28px;
+        background-color:#454545;
+        border-radius:24px;
+        font-size:clamp(16px, 1.5vw, 22px);
+        font-family:'CenturyGothic', sans-serif;
+        cursor:pointer;
+        color: white;
+        text-decoration: none;
+        text-shadow:
+          1px 1px 2px rgba(0,0,0,0.6),
+         -1px -1px 1px rgba(255,255,255,0.3);
+      ">Home</a>
+
+    </div>
+  </div>
+
+</body>
+</html>
