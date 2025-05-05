@@ -35,20 +35,19 @@
       text-decoration: underline;
     }
     main {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 4rem 6rem;
-  gap: 4rem;
-}
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 4rem 6rem;
+      gap: 4rem;
+    }
     .photo img {
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  object-fit: cover;
-  
-}
+      width: 580px;
+      height: 580px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .intro {
       max-width: 900px;
       font-size: 20px;
@@ -100,11 +99,117 @@
       text-decoration: none;
       font-size: 20px;
     }
-      @font-face {
+    @font-face {
       font-family: 'EmbassyOpti';
       src: url('fonts/EmbassyOpti.otf') format('opentype');
     }
-</style>
+
+    /* Responsif untuk Mobile */
+    @media screen and (max-width: 768px) {
+      nav {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center; /* Menengahkan menu */
+        gap: 1.5rem; /* Jarak antar menu */
+        flex-wrap: nowrap;
+      }
+
+      nav a {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+
+      main {
+        flex-direction: column;
+        padding: 2rem 2rem;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .photo {
+        margin-left: 0 !important; /* Override inline style */
+        margin-top: 0 !important; /* Override inline style */
+        text-align: center;
+        width: 100%;
+      }
+
+      .photo img {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 2rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .intro {
+        max-width: 100%;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .intro h2 {
+        font-size: 36px;
+        margin-bottom: 1rem;
+      }
+
+      .intro h2 span:first-child {
+        font-size: 64px;
+      }
+
+      footer {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        text-align: center;
+      }
+      footer .social-icons {
+        margin-top: 1rem;
+        justify-content: center;
+      }
+      footer .social-icons a {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      main {
+        padding: 1rem 1rem;
+      }
+      
+      nav {
+        /* Menghapus flex-direction: column untuk membuat tetap horizontal */
+        justify-content: center;
+        gap: 1rem; /* Mengurangi jarak antar menu untuk layar kecil */
+      }
+      
+      nav a {
+        margin: 0; /* Menghapus margin vertical */
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+      }
+      
+      .photo img {
+        width: 280px;
+        height: 280px;
+      }
+      .intro h2 {
+        font-size: 28px;
+      }
+      .intro h2 span:first-child {
+        font-size: 50px;
+      }
+      footer {
+        padding: 1rem;
+      }
+      footer .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body style="background: url('Images/bg.png') no-repeat center center fixed; background-size: cover;">
   <header>
@@ -115,28 +220,27 @@
       <a href="Contact.html">Contact</a>
     </nav>
   </header>
-  
 
   <main>
-  <div class="photo" style="margin-left: -80px; margin-top: -40px;">
-    <img src="Images/foto pribadi.png" alt="Muh Taufik H">
-  </div>
-  <section class="intro" style="margin-left: auto; margin-right: 0;">
-    <h2>
-  <span style="font-family: 'EmbassyOpti', cursive;">I</span><span>ntroduction</span>
-</h2>
-    <p>Hello, I'm Muh Taufik H. I am a graphic designer with a passion for creating visual designs that are not only appealing but also meaningful and purposeful. Over the past two years, I have worked on various projects, including branding, social media design, and UI/UX.</p>
-
-    <h2 style="margin-top: 3rem;">
-  <span style="font-family: 'EmbassyOpti', cursive;">E</span><span>xperience</span>
-</h2>
-    <div class="experience">
-      <p><strong>Intern Graphic Designer</strong> – Kreasi Binar Indonesia (2022 - 2023)</p>
-      <p><strong>Freelance Graphic Designer</strong> – Kreasi Binar Indonesia (2023 - Sekarang)</p>
-      <p><strong>Freelance Graphic Designer</strong> – Elova Project (2023 - Sekarang)</p>
+    <div class="photo" style="margin-left: -80px; margin-top: -40px;">
+      <img src="Images/foto pribadi.png" alt="Muh Taufik H">
     </div>
-  </section>
-</main>
+    <section class="intro" style="margin-left: auto; margin-right: 0;">
+      <h2>
+        <span style="font-family: 'EmbassyOpti', cursive;">I</span><span>ntroduction</span>
+      </h2>
+      <p>Hello, I'm Muh Taufik H. I am a graphic designer with a passion for creating visual designs that are not only appealing but also meaningful and purposeful. Over the past two years, I have worked on various projects, including branding, social media design, and UI/UX.</p>
+
+      <h2 style="margin-top: 3rem;">
+        <span style="font-family: 'EmbassyOpti', cursive;">E</span><span>xperience</span>
+      </h2>
+      <div class="experience">
+        <p><strong>Intern Graphic Designer</strong> – Kreasi Binar Indonesia (2022 - 2023)</p>
+        <p><strong>Freelance Graphic Designer</strong> – Kreasi Binar Indonesia (2023 - Sekarang)</p>
+        <p><strong>Freelance Graphic Designer</strong> – Elova Project (2023 - Sekarang)</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">Copyright © 2025</p>
