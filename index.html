@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio</title>
 
   <!-- Font lokal -->
@@ -17,6 +17,7 @@
       src: url('fonts/century-regular.ttf') format('truetype');
     }
 
+    /* Global Style */
     body {
       margin: 0;
       padding: 0;
@@ -24,77 +25,138 @@
       width: 100vw;
       background-color: black;
       font-family: 'CenturyGothic', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: white;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.9;
+    }
+
+    .judul-container {
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 1.2;
+    }
+
+    .judul {
+      display: inline-block;
+    }
+
+    .huruf-p {
+      font-family: 'EmbassyOpti';
+      font-size: clamp(130px, 14vw, 260px);
+      display: inline-block;
+      position: relative;
+      left: -35px;
+      margin-right: 12px;
+      transform: translateY(5%);
+      text-shadow: 3px 3px 4px rgba(0,0,0,0.6),
+                   -3px -3px 2px rgba(255,255,255,0.3);
+    }
+
+    .teks-judul {
+      font-family: 'CenturyGothic', sans-serif;
+      font-size: clamp(52px, 6.8vw, 120px);
+      text-shadow: 3px 3px 4px rgba(0,0,0,0.6),
+                   -3px -3px 2px rgba(255,255,255,0.3);
+    }
+
+    .subjudul {
+      font-size: clamp(26px, 3.2vw, 44px);
+      margin-top: -30px;
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.6),
+                   -2px -2px 2px rgba(255,255,255,0.3);
+    }
+
+    .tombol-home {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background-color: #454545;
+      border-radius: 24px;
+      font-size: clamp(16px, 1.5vw, 22px);
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6),
+                   -1px -1px 1px rgba(255,255,255,0.3);
+    }
+
+    /* Responsif untuk HP */
+    @media screen and (max-width: 600px) {
+  .judul-container {
+    bottom: 5%;
+    padding: 0 10px;
+  }
+
+  .judul {
+    display: flex;
+    align-items: center; /* Agar huruf P dan ortofolio sejajar secara vertikal */
+    justify-content: center; /* Menjaga P dan ortofolio tetap di tengah */
+    margin-top: 20px; /* Menurunkan tulisan Portofolio */
+  }
+
+  .huruf-p {
+    font-size: 120px; /* Ukuran huruf P disesuaikan */
+    margin-right: 8px;
+    margin-top: -8px; /* Menaikkan P lebih tinggi */
+    transform: translateX(14px); /* Geser ke kanan lebih jauh */
+  }
+
+  .teks-judul {
+    font-size: 48px; /* Ukuran ortofolio menyesuaikan tampilan */
+  }
+
+  .subjudul {
+    margin-top: px;
+  }
+
+  .tombol-home {
+    margin-top: 15px; /* Naikkan tombol Home */
+    padding: 10px 20px;
+  }
+}
+
+
   </style>
 </head>
 <body>
 
-  <div style="position:relative; width:100%; height:100%; text-align:center; color:white;">
-
+  <div class="container">
     <!-- Background -->
-    <img src="Images/background.png" alt="Background"
-         style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:0.9;" />
+    <img src="Images/background.png" alt="Background" class="background" />
 
     <!-- Konten -->
-    <div style="position:absolute; bottom:15%; left:50%; transform:translateX(-50%); line-height:1.2;">
-
+    <div class="judul-container">
       <!-- Judul -->
-      <div style="display: inline-block;">
-        <span style="
-          font-family:'EmbassyOpti';
-          font-size:clamp(130px, 14vw, 260px);
-          display:inline-block;
-          position:relative;
-          left:-35px;
-          margin-right:12px;
-          transform: translateY(5%);
-          text-shadow:
-            3px 3px 4px rgba(0,0,0,0.6),
-           -3px -3px 2px rgba(255,255,255,0.3);
-        ">
-          P
-        </span>
-        <span style="
-          font-family:'CenturyGothic', sans-serif;
-          font-size:clamp(52px, 6.8vw, 120px);
-          text-shadow:
-            3px 3px 4px rgba(0,0,0,0.6),
-           -3px -3px 2px rgba(255,255,255,0.3);
-        ">
-          ortofolio
-        </span>
+      <div class="judul">
+        <span class="huruf-p">P</span>
+        <span class="teks-judul">ortofolio</span>
       </div>
 
       <!-- Subjudul -->
-      <div style="
-        font-family:'CenturyGothic', sans-serif;
-        font-size:clamp(26px, 3.2vw, 44px);
-        margin-top:-30px;
-        text-shadow:
-          2px 2px 3px rgba(0,0,0,0.6),
-         -2px -2px 2px rgba(255,255,255,0.3);
-      ">
-        Graphic Design
-      </div>
+      <div class="subjudul">Graphic Design</div>
 
       <!-- Tombol -->
-      <a href="home.html" style="
-        display:inline-block;
-        margin-top:30px;
-        padding:12px 28px;
-        background-color:#454545;
-        border-radius:24px;
-        font-size:clamp(16px, 1.5vw, 22px);
-        font-family:'CenturyGothic', sans-serif;
-        cursor:pointer;
-        color: white;
-        text-decoration: none;
-        text-shadow:
-          1px 1px 2px rgba(0,0,0,0.6),
-         -1px -1px 1px rgba(255,255,255,0.3);
-      ">Home</a>
-
+      <a href="home.html" class="tombol-home">Home</a>
     </div>
   </div>
 
