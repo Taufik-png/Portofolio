@@ -88,22 +88,22 @@
       gap: 2rem;
     }
     .cert-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  padding: 10px;
-  border-radius: 12px;
-  width: 300px;
-  height: 200px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      padding: 10px;
+      border-radius: 12px;
+      width: 300px;
+      height: 200px;
+    }
     .cert-item img {
-  width: 280px;
-  height: auto;
-  object-fit: contain;
-  z-index: 2;
-  border-radius: 8px;
-}
+      width: 280px;
+      height: auto;
+      object-fit: contain;
+      z-index: 2;
+      border-radius: 8px;
+    }
     footer {
       background-color: black;
       color: white;
@@ -128,6 +128,137 @@
     @font-face {
       font-family: 'EmbassyOpti';
       src: url('fonts/EmbassyOpti.otf') format('opentype');
+    }
+    
+    /* Responsif untuk Mobile */
+    @media screen and (max-width: 768px) {
+      nav {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center; /* Menengahkan menu */
+        gap: 1.5rem; /* Jarak antar menu */
+        flex-wrap: nowrap;
+      }
+
+      nav a {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+
+      main {
+        padding: 2rem 2rem;
+        gap: 3rem;
+      }
+      
+      h2 {
+        font-size: 40px;
+        text-align: center;
+      }
+      
+      h2 span:first-child {
+        font-size: 60px;
+        left: -5px;
+      }
+      
+      .skills div, .cert-list {
+        justify-content: center;
+      }
+      
+      .skill-icon-container {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .skill-icon-container img {
+        width: 100px;
+      }
+      
+      .stars {
+        font-size: 28px;
+      }
+      
+      .cert-item {
+        width: 250px;
+        height: 170px;
+      }
+      
+      .cert-item img {
+        width: 230px;
+      }
+
+      footer {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        text-align: center;
+      }
+      
+      footer .social-icons {
+        margin-top: 1rem;
+        justify-content: center;
+      }
+      
+      footer .social-icons a {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      main {
+        padding: 1rem 1rem;
+      }
+      
+      nav {
+        justify-content: center;
+        gap: 1rem; /* Mengurangi jarak antar menu untuk layar kecil */
+      }
+      
+      nav a {
+        margin: 0; /* Menghapus margin vertical */
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+      }
+      
+      h2 {
+        font-size: 32px;
+      }
+      
+      h2 span:first-child {
+        font-size: 50px;
+      }
+      
+      .skill-icon-container {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .skill-icon-container img {
+        width: 80px;
+      }
+      
+      .stars {
+        font-size: 24px;
+      }
+      
+      .cert-item {
+        width: 220px;
+        height: 150px;
+      }
+      
+      .cert-item img {
+        width: 200px;
+      }
+      
+      footer {
+        padding: 1rem;
+      }
+      
+      footer .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
     }
   </style>
 </head>
