@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio - Muh Taufik H.</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Muh Taufik H.</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
+    @font-face {
+      font-family: 'EmbassyOpti';
+      src: url('fonts/EmbassyOpti.otf') format('opentype');
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to bottom right, #fff, #eaeaea);
+      background: url('Images/bg.png') no-repeat center center fixed;
+      background-size: cover;
       color: #111;
       max-width: 1920px;
       margin: 0 auto;
     }
+
     nav {
       display: flex;
       justify-content: flex-end;
@@ -27,13 +35,16 @@
       font-weight: 600;
       font-size: 1.5rem;
     }
+
     nav a {
       text-decoration: none;
       color: black;
     }
+
     nav a.active {
       text-decoration: underline;
     }
+
     main {
       display: flex;
       flex-direction: row;
@@ -42,42 +53,51 @@
       padding: 4rem 6rem;
       gap: 4rem;
     }
+
     .photo img {
       width: 580px;
       height: 580px;
       border-radius: 50%;
       object-fit: cover;
     }
+
     .intro {
       max-width: 900px;
       font-size: 20px;
       line-height: 1.6;
     }
+
     .intro h2 {
-      font-size: 64px;
       margin-bottom: 1rem;
     }
-    .intro h2 span:first-child {
-      font-family: 'Roboto Slab', serif;
-      font-style: italic;
-      font-weight: 400;
+
+    h2 {
+      font-size: 64px;
+    }
+
+    h2 span:first-child {
+      font-family: 'EmbassyOpti', cursive;
       font-size: 100px;
       margin-right: 10px;
       position: relative;
       left: -10px;
     }
-    .intro h2 span:last-child {
+
+    h2 span:last-child {
       font-weight: 700;
       position: relative;
       left: 4px;
     }
+
     .experience p {
       font-size: 20px;
       margin-bottom: 1rem;
     }
+
     .experience p strong {
       font-weight: 700;
     }
+
     footer {
       background-color: black;
       color: white;
@@ -86,6 +106,7 @@
       justify-content: space-between;
       align-items: center;
     }
+
     footer .social-icons a {
       display: inline-flex;
       align-items: center;
@@ -99,25 +120,14 @@
       text-decoration: none;
       font-size: 20px;
     }
-    @font-face {
-      font-family: 'EmbassyOpti';
-      src: url('fonts/EmbassyOpti.otf') format('opentype');
-    }
 
-    /* Responsif untuk Mobile */
+    /* Responsif untuk Tablet */
     @media screen and (max-width: 768px) {
       nav {
         padding: 1rem 2rem;
         font-size: 1rem;
-        display: flex;
-        justify-content: center; /* Menengahkan menu */
-        gap: 1.5rem; /* Jarak antar menu */
-        flex-wrap: nowrap;
-      }
-
-      nav a {
-        font-size: 1rem;
-        padding: 0.5rem;
+        justify-content: center;
+        gap: 1.5rem;
       }
 
       main {
@@ -128,8 +138,8 @@
       }
 
       .photo {
-        margin-left: 0 !important; /* Override inline style */
-        margin-top: 0 !important; /* Override inline style */
+        margin-left: 0 !important;
+        margin-top: 0 !important;
         text-align: center;
         width: 100%;
       }
@@ -149,12 +159,11 @@
         text-align: center;
       }
 
-      .intro h2 {
+      h2 {
         font-size: 36px;
-        margin-bottom: 1rem;
       }
 
-      .intro h2 span:first-child {
+      h2 span:first-child {
         font-size: 64px;
       }
 
@@ -163,10 +172,12 @@
         padding: 1rem 2rem;
         text-align: center;
       }
+
       footer .social-icons {
         margin-top: 1rem;
         justify-content: center;
       }
+
       footer .social-icons a {
         font-size: 24px;
         width: 40px;
@@ -174,35 +185,38 @@
       }
     }
 
+    /* Responsif untuk Mobile Kecil */
     @media screen and (max-width: 480px) {
       main {
         padding: 1rem 1rem;
       }
-      
+
       nav {
-        /* Menghapus flex-direction: column untuk membuat tetap horizontal */
         justify-content: center;
-        gap: 1rem; /* Mengurangi jarak antar menu untuk layar kecil */
+        gap: 1rem;
       }
-      
+
       nav a {
-        margin: 0; /* Menghapus margin vertical */
-        font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+        font-size: 0.9rem;
       }
-      
+
       .photo img {
         width: 280px;
         height: 280px;
       }
-      .intro h2 {
+
+      h2 {
         font-size: 28px;
       }
-      .intro h2 span:first-child {
+
+      h2 span:first-child {
         font-size: 50px;
       }
+
       footer {
         padding: 1rem;
       }
+
       footer .social-icons a {
         width: 35px;
         height: 35px;
@@ -211,7 +225,7 @@
     }
   </style>
 </head>
-<body style="background: url('Images/bg.png') no-repeat center center fixed; background-size: cover;">
+<body>
   <header>
     <nav>
       <a href="index.html" class="active">Home</a>
@@ -226,14 +240,10 @@
       <img src="Images/foto pribadi.png" alt="Muh Taufik H">
     </div>
     <section class="intro" style="margin-left: auto; margin-right: 0;">
-      <h2>
-        <span style="font-family: 'EmbassyOpti', cursive;">I</span><span>ntroduction</span>
-      </h2>
+      <h2><span>I</span><span>ntroduction</span></h2>
       <p>Hello, I'm Muh Taufik H. I am a graphic designer with a passion for creating visual designs that are not only appealing but also meaningful and purposeful. Over the past two years, I have worked on various projects, including branding, social media design, and UI/UX.</p>
 
-      <h2 style="margin-top: 3rem;">
-        <span style="font-family: 'EmbassyOpti', cursive;">E</span><span>xperience</span>
-      </h2>
+      <h2 style="margin-top: 3rem;"><span>E</span><span>xperience</span></h2>
       <div class="experience">
         <p><strong>Intern Graphic Designer</strong> – Kreasi Binar Indonesia (2022 - 2023)</p>
         <p><strong>Freelance Graphic Designer</strong> – Kreasi Binar Indonesia (2023 - Sekarang)</p>
@@ -243,7 +253,7 @@
   </main>
 
   <footer>
-    <p style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">Copyright © 2025</p>
+    <p style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;">&copy; 2025 Muh Taufik H.</p>
     <div class="social-icons">
       <a href="https://www.instagram.com/mhtfik/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@mhtfik?_t=ZS-8ufgPnfZkBQ&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
